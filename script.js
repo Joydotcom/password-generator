@@ -1,14 +1,13 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" ];
-var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" ];
-var num = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-var char = ["!", "@", "#", "$", "%", "^","&", "*", "(", ")"];
+var lowercase = ["abcdefghijklmnopqrstuvwxyz"];
+var uppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var num = ["01234567789"];
+var char = ["!@#$%^&*()"];
 
-// var ;
 
-all_chars = ["1","2","3","4","5","6","7","8","9","0","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","!","@","#","$","%","^","&","*","(",")"];
+all_chars = ["0123456789ABCDEFGHIJKLMONOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()"];
 
 
 
@@ -23,7 +22,7 @@ if (passwordLength < 8 || passwordLength > 128){
   return ("");
 }
 
-// (int)(Math.random() * 72)
+
 
 var uppercaseChoice = window.confirm("Will your password include uppercase letters?");
 console.log(uppercaseChoice);
@@ -48,15 +47,15 @@ all_chars = all_chars.concat(char);
 if (all_chars.length === 0) {
 alert("You need at least one character ")
 return generatePassword ();
-  
-  for (var all_chars = 0; all_chars < passwordLength; all_chars++) {
-    var randomIndex = math.floor(math.random() * all_chars.length)
-    console.log(randomIndex)
+}
+  for (var i = 0; i < passwordLength; i++) {
+    var all_chars = math.floor(math.random() * all_chars.length);
+    console.log(all_chars)
       
-      var raandomChar = (all_chara[randomIndex]);
+      var randomChar = (all_chars[randomIndex]);
       console.log(randomChar)
       finalpass += randomChar
-  }
+  
  return password () 
 }
 
@@ -84,7 +83,9 @@ return generatePassword ();
 //       confirmCharacter = confirm("Will this contain special characters?");
 //       confirmUppercase = confirm("Will this contain Uppercase letters?");
 //       confirmLowercase = confirm("Will this contain Lowercase letters?");
-//   };
+//  
+
+// (int)(Math.random() * 72) };
 
 // Write password to the #password input
 function writePassword() {
