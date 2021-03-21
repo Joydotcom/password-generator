@@ -1,5 +1,9 @@
 # password-generator
 
+# DESCRIPTION
+This is a password generator.
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 // array of all lowercase letters
